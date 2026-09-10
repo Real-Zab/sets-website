@@ -6,316 +6,173 @@
 <title>SETS — Senegal Engineering & Technical Services</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy:#0D2438;
-    --navy-2:#123049;
-    --forest:#1F5F3F;
-    --forest-light:#3D8B5F;
-    --paper:#F5F6F2;
-    --paper-2:#ECEEE7;
-    --ink:#12202A;
-    --steel:#5B6B72;
-    --amber:#DD8A3C;
-    --line:#C7CDC3;
-    --line-dark:rgba(245,246,242,0.25);
-    --max:1180px;
+    --blue:#1E7A4C;
+    --blue-dark:#0B3B26;
+    --blue-light:#4FAE79;
+    --gold:#E3A73C;
+    --green:#2E8B57;
+    --paper:#FFFFFF;
+    --paper-2:#F4F6F8;
+    --ink:#16202B;
+    --steel:#5B6B78;
+    --line:#E1E5EA;
+    --max:1200px;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'Inter', sans-serif;
-    font-size:16px;
-    line-height:1.6;
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:'Inter',sans-serif;font-size:16px;line-height:1.65;
     -webkit-font-smoothing:antialiased;
   }
   h1,h2,h3,h4{
-    font-family:'Playfair Display', serif;
-    font-weight:500;
-    margin:0;
-    color:var(--navy);
-    letter-spacing:-0.01em;
+    font-family:'Archivo',sans-serif;font-weight:700;margin:0;
+    color:var(--blue-dark);letter-spacing:-0.015em;line-height:1.1;
   }
   a{color:inherit;text-decoration:none;}
-  img{max-width:100%;display:block;}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 32px;}
   @media(max-width:640px){.wrap{padding:0 20px;}}
-  section[id]{scroll-margin-top:76px;}
-
-  :focus-visible{outline:2px solid var(--amber);outline-offset:3px;}
-  @media (prefers-reduced-motion: reduce){
-    *{animation:none !important;transition:none !important;}
-  }
-
-  /* corner registration marks — technical-drawing device used throughout */
-  .marks{position:relative;}
-  .marks::before,.marks::after{
-    content:"";position:absolute;width:14px;height:14px;
-    border-top:1.5px solid var(--forest-light);
-    border-left:1.5px solid var(--forest-light);
-    top:-1px;left:-1px;
-  }
-  .marks::after{
-    top:auto;left:auto;bottom:-1px;right:-1px;
-    border-top:none;border-left:none;
-    border-bottom:1.5px solid var(--forest-light);
-    border-right:1.5px solid var(--forest-light);
-  }
+  section[id]{scroll-margin-top:80px;}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+  @media (prefers-reduced-motion: reduce){*{animation:none !important;transition:none !important;}}
 
   /* ---------- HEADER ---------- */
-  header{
-    position:sticky;top:0;z-index:50;
-    background:rgba(245,246,242,0.92);
-    backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--line);
-  }
-  .nav{
-    display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
-    padding:16px 32px;max-width:var(--max);margin:0 auto;
-  }
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:18px 32px;max-width:var(--max);margin:0 auto;}
   .nav-side{display:flex;align-items:center;}
   .nav-side.right{justify-content:flex-end;}
   .brand{display:flex;align-items:center;gap:10px;justify-self:center;}
-  .brand-mark{width:32px;height:32px;flex:none;}
-  .brand-text{font-family:'Playfair Display',serif;font-size:16px;line-height:1.15;color:var(--navy);}
-  .brand-text b{font-weight:600;display:block;letter-spacing:0.02em;}
-  .icon-btn{
-    background:none;border:none;cursor:pointer;padding:6px;
-    display:flex;align-items:center;justify-content:center;color:var(--navy);
-  }
-  .icon-btn svg{width:22px;height:22px;}
-  .burger span{display:block;width:22px;height:1.5px;background:var(--navy);margin:5px 0;}
-
-  .nav-menu{
-    position:absolute;top:100%;left:0;right:0;
-    background:var(--paper);border-bottom:1px solid var(--line);
-    display:none;flex-direction:column;padding:8px 32px 20px;
-  }
+  .brand-mark{width:30px;height:30px;flex:none;}
+  .brand-text{font-family:'Archivo',sans-serif;font-weight:800;font-size:17px;letter-spacing:0.02em;color:var(--blue-dark);}
+  .icon-btn{background:none;border:none;cursor:pointer;padding:6px;display:flex;align-items:center;justify-content:center;color:var(--blue-dark);}
+  .icon-btn svg{width:21px;height:21px;}
+  .burger span{display:block;width:22px;height:2px;background:var(--blue-dark);margin:5px 0;}
+  .nav-menu{position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);display:none;flex-direction:column;padding:8px 32px 20px;}
   .nav-menu.open{display:flex;}
-  .nav-menu a{
-    padding:12px 0;font-size:15px;color:var(--navy);
-    border-top:1px solid var(--line);
-  }
-  .nav-menu a:hover{color:var(--forest);}
-  .nav-search{
-    position:absolute;top:100%;left:0;right:0;
-    background:var(--paper);border-bottom:1px solid var(--line);
-    display:none;padding:16px 32px;
-  }
+  .nav-menu a{padding:13px 0;font-size:15px;font-weight:500;color:var(--blue-dark);border-top:1px solid var(--line);}
+  .nav-menu a:hover{color:var(--blue);}
+  .nav-search{position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);display:none;padding:16px 32px;}
   .nav-search.open{display:flex;}
-  .nav-search input{
-    flex:1;border:none;border-bottom:1px solid var(--navy);
-    background:transparent;font-size:16px;padding:8px 2px;
-    font-family:inherit;color:var(--navy);
-  }
+  .nav-search input{flex:1;border:none;border-bottom:1px solid var(--blue-dark);background:transparent;font-size:16px;padding:8px 2px;font-family:inherit;color:var(--blue-dark);}
   .nav-search input:focus{outline:none;}
 
   /* ---------- HERO ---------- */
-  .hero{
-    position:relative;
-    background:var(--navy);
-    color:var(--paper);
-    overflow:hidden;
-    padding:96px 0 0;
-  }
-  .hero-grid{
-    position:absolute;inset:0;
-    background-image:
-      linear-gradient(var(--line-dark) 1px, transparent 1px),
-      linear-gradient(90deg, var(--line-dark) 1px, transparent 1px);
-    background-size:64px 64px;
-    opacity:0.35;
-    mask-image:linear-gradient(to bottom, black, transparent 85%);
-  }
-  .hero-inner{
-    position:relative;z-index:2;
-    max-width:var(--max);margin:0 auto;padding:0 32px;
-    display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px;align-items:end;
-  }
-  @media(max-width:900px){.hero-inner{grid-template-columns:1fr;}}
-  .hero-tag{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12.5px;color:var(--forest-light);
-    display:flex;align-items:center;gap:10px;margin-bottom:24px;
-  }
-  .hero-tag::before{content:"";width:26px;height:1px;background:var(--forest-light);}
-  .hero h1{
-    color:var(--paper);
-    font-size:clamp(38px,5.4vw,64px);
-    font-weight:400;
-    line-height:1.05;
-    max-width:14ch;
-  }
-  .hero h1 em{font-style:italic;font-weight:300;color:#BFD8C7;}
-  .hero p.lead{
-    margin-top:22px;max-width:46ch;
-    color:#C8D2D6;font-size:17px;
-  }
-  .hero-actions{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;}
-  .btn{
-    display:inline-flex;align-items:center;gap:8px;
-    padding:13px 24px;font-size:14.5px;font-weight:500;
-    border-radius:2px;border:1px solid transparent;cursor:pointer;
-  }
-  .btn-primary{background:var(--forest-light);color:var(--navy);}
-  .btn-primary:hover{background:#4fa373;}
-  .btn-ghost{border-color:rgba(245,246,242,0.35);color:var(--paper);}
-  .btn-ghost:hover{border-color:var(--paper);}
+  .hero{position:relative;background:var(--blue-dark);color:#fff;overflow:hidden;padding:110px 0 90px;}
+  .hero-pattern{position:absolute;inset:0;opacity:0.5;
+    background-image:linear-gradient(rgba(255,255,255,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.06) 1px,transparent 1px);
+    background-size:56px 56px;
+    mask-image:radial-gradient(circle at 75% 30%, black, transparent 70%);}
+  .hero-accent{position:absolute;top:-120px;right:-120px;width:420px;height:420px;border-radius:50%;
+    background:radial-gradient(circle, rgba(227,167,60,0.18), transparent 70%);}
+  .hero-inner{position:relative;z-index:2;max-width:var(--max);margin:0 auto;padding:0 32px;}
+  .eyebrow{font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);
+    display:flex;align-items:center;gap:10px;margin-bottom:22px;}
+  .eyebrow::before{content:"";width:28px;height:2px;background:var(--gold);}
+  .hero h1{color:#fff;font-size:clamp(34px,5vw,58px);max-width:18ch;}
+  .hero h1 span{color:var(--gold);}
+  .hero p.lead{margin-top:22px;max-width:52ch;color:#C6D2E3;font-size:17.5px;line-height:1.6;}
+  .hero-actions{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap;}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;font-size:14.5px;font-weight:600;
+    border-radius:3px;border:1.5px solid transparent;cursor:pointer;}
+  .btn-primary{background:var(--gold);color:var(--blue-dark);}
+  .btn-primary:hover{background:#f0b955;}
+  .btn-ghost{border-color:rgba(255,255,255,0.4);color:#fff;}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,0.06);}
 
-  .hero-panel{
-    border:1px solid rgba(245,246,242,0.18);
-    padding:26px;position:relative;
-  }
-  .hero-panel .marks::before,.hero-panel .marks::after{border-color:var(--forest-light);}
-  .hero-stat{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(245,246,242,0.14);}
-  .hero-stat:last-child{border-bottom:none;}
-  .hero-stat .label{font-size:13.5px;color:#9FB0B6;}
-  .hero-stat .value{font-family:'Playfair Display',serif;font-size:20px;color:var(--paper);}
-
-  .hero-illustration{padding:56px 0 0;}
-  .hero-illustration svg{width:100%;height:auto;display:block;}
-
-  /* ---------- STATS BAND ---------- */
+  /* ---------- STATS ---------- */
   .stats-band{background:var(--paper-2);border-bottom:1px solid var(--line);}
   .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);}
   @media(max-width:760px){.stats-grid{grid-template-columns:repeat(2,1fr);}}
-  .stat-item{
-    padding:36px 28px;border-right:1px solid var(--line);
-    text-align:left;
-  }
+  .stat-item{padding:38px 30px;border-right:1px solid var(--line);}
   .stat-item:last-child{border-right:none;}
-  .stat-item .num{font-family:'Playfair Display',serif;font-size:clamp(30px,3.4vw,42px);color:var(--navy);line-height:1;}
-  .stat-item .lbl{font-size:13px;color:var(--steel);margin-top:10px;line-height:1.4;}
+  .stat-item .num{font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(30px,3.2vw,40px);color:var(--blue);}
+  .stat-item .lbl{font-size:13.5px;color:var(--steel);margin-top:8px;}
 
-  /* ---------- PHILOSOPHY / DIAGRAM ---------- */
-  .philo{background:var(--paper);}
-  .philo-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
-  @media(max-width:900px){.philo-grid{grid-template-columns:1fr;gap:40px;}}
-  .philo h2{font-size:clamp(28px,3.4vw,38px);font-weight:400;max-width:15ch;margin-bottom:22px;}
-  .philo h2 em{font-style:italic;color:var(--forest);}
-  .philo p{color:var(--steel);font-size:15.5px;margin:0 0 16px;}
-  .diagram{border:1px solid var(--line);padding:28px;}
-  .diagram-row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-top:1px solid var(--line);font-size:13.5px;}
-  .diagram-row:first-child{border-top:none;}
-  .diagram-row .zone{color:var(--steel);font-family:'IBM Plex Mono',monospace;font-size:11.5px;}
-  .diagram-row .items{color:var(--navy);font-weight:500;text-align:right;}
-
-  .section{padding:96px 0;}
-  .section.tight{padding:72px 0;}
-  .section-head{
-    display:flex;justify-content:space-between;align-items:flex-end;gap:24px;
-    margin-bottom:52px;flex-wrap:wrap;
-  }
-  .kicker{
-    font-family:'IBM Plex Mono',monospace;font-size:12.5px;
-    color:var(--forest);display:flex;align-items:center;gap:10px;margin-bottom:14px;
-  }
-  .kicker::before{content:"";width:22px;height:1px;background:var(--forest);}
-  .section-head h2{font-size:clamp(28px,3.4vw,40px);font-weight:400;max-width:16ch;}
+  /* ---------- SECTION SHELL ---------- */
+  .section{padding:100px 0;}
+  .section.tight{padding:76px 0;}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:56px;flex-wrap:wrap;}
+  .eyebrow-dark{font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--blue);
+    display:flex;align-items:center;gap:10px;margin-bottom:16px;}
+  .eyebrow-dark::before{content:"";width:24px;height:2px;background:var(--blue);}
+  .section-head h2{font-size:clamp(26px,3vw,36px);max-width:18ch;}
   .section-head p{max-width:38ch;color:var(--steel);font-size:15.5px;}
 
-  hr.rule{border:none;border-top:1px solid var(--line);margin:0;}
-
-  /* ---------- INTRO / MISSION ---------- */
-  .intro{background:var(--paper-2);}
-  .intro-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;}
-  @media(max-width:860px){.intro-grid{grid-template-columns:1fr;gap:36px;}}
-  .intro-lead{font-family:'Playfair Display',serif;font-size:24px;font-weight:400;color:var(--navy);line-height:1.4;}
-  .intro-body p{color:var(--steel);font-size:15.5px;margin:0 0 16px;}
-  .intro-body p:last-child{margin-bottom:0;}
-
-  /* ---------- DOMAINES ---------- */
-  .domains{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line);}
+  /* ---------- SERVICES / DOMAINES ---------- */
+  .domains{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
   @media(max-width:980px){.domains{grid-template-columns:repeat(2,1fr);}}
   @media(max-width:560px){.domains{grid-template-columns:1fr;}}
-  .domain-card{
-    border-right:1px solid var(--line);border-bottom:1px solid var(--line);
-    padding:28px 22px;background:var(--paper);
-  }
-  .domain-icon{width:34px;height:34px;color:var(--forest);margin-bottom:20px;}
-  .domain-card h3{font-size:17px;font-weight:500;margin-bottom:14px;line-height:1.3;}
-  .domain-card ul{margin:0;padding:0;list-style:none;}
-  .domain-card li{
-    font-size:13.5px;color:var(--steel);padding:6px 0 6px 16px;
-    position:relative;border-top:1px solid var(--line);
-  }
-  .domain-card li:first-child{border-top:none;}
-  .domain-card li::before{content:"—";position:absolute;left:0;color:var(--forest-light);}
+  .domain-card{background:var(--paper);padding:30px 24px;}
+  .domain-icon{width:32px;height:32px;color:var(--blue);margin-bottom:22px;}
+  .domain-card h3{font-size:16.5px;font-weight:700;margin-bottom:10px;line-height:1.3;color:var(--blue-dark);}
+  .domain-card p{font-size:13.8px;color:var(--steel);margin:0;}
 
-  /* ---------- POURQUOI ---------- */
-  .why{background:var(--navy);color:var(--paper);}
-  .why .kicker{color:var(--forest-light);}
-  .why .kicker::before{background:var(--forest-light);}
-  .why .section-head h2{color:var(--paper);}
-  .why .section-head p{color:#A9B7BC;}
-  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(245,246,242,0.14);}
+  /* ---------- ENERGY / SUSTAINABILITY BAND ---------- */
+  .energy{background:linear-gradient(120deg, var(--green) 0%, #24714A 100%);color:#fff;position:relative;overflow:hidden;}
+  .energy::after{content:"";position:absolute;bottom:-100px;left:-60px;width:340px;height:340px;border-radius:50%;
+    background:radial-gradient(circle, rgba(227,167,60,0.28), transparent 70%);}
+  .energy-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;}
+  @media(max-width:900px){.energy-grid{grid-template-columns:1fr;}}
+  .energy .eyebrow-dark{color:var(--gold);}
+  .energy .eyebrow-dark::before{background:var(--gold);}
+  .energy h2{color:#fff;font-size:clamp(26px,3vw,36px);max-width:16ch;margin-bottom:18px;}
+  .energy p{color:#DCEFE2;font-size:15.5px;margin:0 0 14px;max-width:48ch;}
+  .energy-badges{display:flex;flex-direction:column;gap:1px;background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.18);}
+  .energy-badge{background:#276B49;padding:20px 22px;display:flex;align-items:center;gap:16px;}
+  .energy-badge svg{width:26px;height:26px;color:var(--gold);flex:none;}
+  .energy-badge span{font-size:14.5px;font-weight:600;}
+
+  /* ---------- WHY ---------- */
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
   @media(max-width:900px){.why-grid{grid-template-columns:repeat(2,1fr);}}
   @media(max-width:560px){.why-grid{grid-template-columns:1fr;}}
-  .why-card{background:var(--navy);padding:30px 24px;}
-  .why-icon{width:28px;height:28px;color:var(--forest-light);margin-bottom:22px;}
-  .why-card h3{color:var(--paper);font-size:16px;font-weight:500;margin-bottom:10px;}
-  .why-card p{color:#A9B7BC;font-size:14px;margin:0;}
+  .why-card{background:var(--paper);padding:30px 24px;}
+  .why-icon{width:26px;height:26px;color:var(--blue);margin-bottom:20px;}
+  .why-card h3{font-size:15.5px;font-weight:700;margin-bottom:8px;color:var(--blue-dark);}
+  .why-card p{font-size:13.8px;color:var(--steel);margin:0;}
 
   /* ---------- SECTEURS ---------- */
-  .sectors-list{display:flex;flex-wrap:wrap;border-top:1px solid var(--line);}
-  .sector-item{
-    flex:1 1 160px;display:flex;align-items:center;gap:12px;
-    padding:20px 18px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);
-  }
-  .sector-item svg{width:22px;height:22px;color:var(--forest);flex:none;}
-  .sector-item span{font-size:14.5px;font-weight:500;color:var(--navy);}
+  .sectors-list{display:flex;flex-wrap:wrap;border-top:1px solid var(--line);border-left:1px solid var(--line);}
+  .sector-item{flex:1 1 170px;display:flex;align-items:center;gap:12px;padding:22px 20px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);}
+  .sector-item svg{width:21px;height:21px;color:var(--blue);flex:none;}
+  .sector-item span{font-size:14.5px;font-weight:600;color:var(--blue-dark);}
 
   /* ---------- QUOTE ---------- */
-  .quote-band{background:var(--paper-2);padding:88px 0;text-align:center;}
-  .quote-band blockquote{
-    margin:0 auto;max-width:720px;
-    font-family:'Playfair Display',serif;font-weight:400;font-style:italic;
-    font-size:clamp(20px,2.6vw,28px);color:var(--navy);line-height:1.5;
-  }
-  .quote-band cite{
-    display:block;margin-top:22px;font-style:normal;
-    font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--forest);
-  }
+  .quote-band{background:var(--blue-dark);padding:90px 0;text-align:center;}
+  .quote-band blockquote{margin:0 auto;max-width:760px;font-family:'Archivo',sans-serif;font-weight:600;
+    font-size:clamp(19px,2.3vw,26px);color:#fff;line-height:1.5;}
+  .quote-band cite{display:block;margin-top:24px;font-style:normal;font-size:13px;font-weight:600;
+    letter-spacing:0.05em;text-transform:uppercase;color:var(--gold);}
 
   /* ---------- CONTACT ---------- */
-  .contact{background:var(--navy);color:var(--paper);}
+  .contact{background:var(--paper-2);}
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;}
   @media(max-width:860px){.contact-grid{grid-template-columns:1fr;gap:36px;}}
-  .contact h2{color:var(--paper);font-size:clamp(28px,3.4vw,38px);font-weight:400;max-width:14ch;}
-  .contact-list{margin-top:30px;}
-  .contact-row{
-    display:flex;align-items:center;gap:14px;padding:16px 0;
-    border-top:1px solid rgba(245,246,242,0.16);
-  }
-  .contact-row svg{width:19px;height:19px;color:var(--forest-light);flex:none;}
-  .contact-row a{font-size:15px;color:var(--paper);}
-  .contact-row a:hover{color:var(--forest-light);}
-  .contact-panel{border:1px solid rgba(245,246,242,0.18);padding:30px;}
-  .contact-panel h3{color:var(--paper);font-size:16px;font-weight:500;margin-bottom:18px;}
+  .contact h2{font-size:clamp(26px,3vw,34px);max-width:14ch;}
+  .contact-list{margin-top:28px;}
+  .contact-row{display:flex;align-items:center;gap:14px;padding:16px 0;border-top:1px solid var(--line);}
+  .contact-row svg{width:19px;height:19px;color:var(--blue);flex:none;}
+  .contact-row a{font-size:15px;color:var(--blue-dark);font-weight:500;}
+  .contact-row a:hover{color:var(--blue);}
+  .contact-panel{background:#fff;border:1px solid var(--line);padding:32px;border-radius:4px;}
+  .contact-panel h3{font-size:16px;font-weight:700;margin-bottom:18px;color:var(--blue-dark);}
   .field{margin-bottom:16px;}
-  .field label{display:block;font-size:12.5px;color:#A9B7BC;margin-bottom:6px;}
-  .field input, .field textarea{
-    width:100%;background:transparent;border:1px solid rgba(245,246,242,0.28);
-    color:var(--paper);padding:11px 12px;font-family:inherit;font-size:14.5px;border-radius:2px;
-  }
+  .field label{display:block;font-size:12.5px;color:var(--steel);margin-bottom:6px;font-weight:500;}
+  .field input,.field textarea{width:100%;background:#fff;border:1px solid var(--line);color:var(--ink);
+    padding:11px 12px;font-family:inherit;font-size:14.5px;border-radius:3px;}
   .field textarea{resize:vertical;min-height:80px;}
-  .field input::placeholder,.field textarea::placeholder{color:#6E828A;}
   .contact-panel .btn-primary{width:100%;justify-content:center;margin-top:4px;}
 
-  /* ---------- FOOTER ---------- */
-  footer{background:var(--navy-2);color:#8FA1A8;padding:28px 0;border-top:1px solid rgba(245,246,242,0.1);}
+  footer{background:var(--blue-dark);color:#9FB2CC;padding:30px 0;}
   .footer-row{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;flex-wrap:wrap;gap:10px;}
-  .footer-row a{color:#8FA1A8;}
-  .footer-row a:hover{color:var(--paper);}
 </style>
 </head>
 <body>
 
-<header style="position:relative;">
+<header>
   <div class="nav">
     <div class="nav-side left">
       <button class="icon-btn burger" id="menuToggle" aria-label="Menu" aria-expanded="false" aria-controls="navMenu">
@@ -324,13 +181,13 @@
     </div>
     <a href="#top" class="brand">
       <svg class="brand-mark" viewBox="0 0 100 100" fill="none">
-        <circle cx="50" cy="50" r="46" stroke="#1F5F3F" stroke-width="4"/>
-        <rect x="30" y="34" width="16" height="36" fill="#0D2438"/>
-        <rect x="48" y="24" width="16" height="46" fill="#123049"/>
-        <path d="M78 30 L70 44 H78 L68 60" stroke="#DD8A3C" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M58 66c10-2 16 4 16 12-10 2-18-2-16-12z" fill="#3D8B5F"/>
+        <circle cx="50" cy="50" r="46" stroke="#2E8B57" stroke-width="4"/>
+        <rect x="30" y="34" width="16" height="36" fill="#0B3B26"/>
+        <rect x="48" y="24" width="16" height="46" fill="#1E7A4C"/>
+        <path d="M78 30 L70 44 H78 L68 60" stroke="#E3A73C" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M58 66c10-2 16 4 16 12-10 2-18-2-16-12z" fill="#2E8B57"/>
       </svg>
-      <div class="brand-text"><b>SETS</b></div>
+      <div class="brand-text">SETS</div>
     </a>
     <div class="nav-side right">
       <button class="icon-btn" id="searchToggle" aria-label="Recherche" aria-expanded="false" aria-controls="navSearch">
@@ -341,6 +198,7 @@
   <nav class="nav-menu" id="navMenu">
     <a href="#mission">La société</a>
     <a href="#domaines">Domaines d'intervention</a>
+    <a href="#energie">Énergie durable</a>
     <a href="#pourquoi">Pourquoi SETS</a>
     <a href="#secteurs">Secteurs d'activité</a>
     <a href="#contact">Contact</a>
@@ -360,19 +218,16 @@
   menuBtn.addEventListener('click', () => {
     const open = navMenu.classList.toggle('open');
     menuBtn.setAttribute('aria-expanded', open);
-    navSearch.classList.remove('open');
-    searchBtn.setAttribute('aria-expanded', false);
+    navSearch.classList.remove('open'); searchBtn.setAttribute('aria-expanded', false);
   });
   searchBtn.addEventListener('click', () => {
     const open = navSearch.classList.toggle('open');
     searchBtn.setAttribute('aria-expanded', open);
-    navMenu.classList.remove('open');
-    menuBtn.setAttribute('aria-expanded', false);
+    navMenu.classList.remove('open'); menuBtn.setAttribute('aria-expanded', false);
     if(open) navSearch.querySelector('input').focus();
   });
   navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    navMenu.classList.remove('open');
-    menuBtn.setAttribute('aria-expanded', false);
+    navMenu.classList.remove('open'); menuBtn.setAttribute('aria-expanded', false);
   }));
 </script>
 
@@ -380,69 +235,20 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-grid"></div>
+    <div class="hero-pattern"></div>
+    <div class="hero-accent"></div>
     <div class="hero-inner">
-      <div>
-        <p class="hero-tag">Facility management &amp; services techniques intégrés</p>
-        <h1>Des infrastructures <em>performantes</em>, sûres et durables.</h1>
-        <p class="lead">SETS accompagne entreprises, administrations, industries, établissements de santé et infrastructures tertiaires dans la gestion, l'exploitation et l'optimisation de leurs bâtiments et équipements techniques — partout au Sénégal.</p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">Demander un audit énergétique</a>
-          <a href="#domaines" class="btn btn-ghost">Voir nos domaines d'intervention</a>
-        </div>
+      <p class="eyebrow">Facility management & services techniques intégrés</p>
+      <h1>Infrastructures performantes. <span>Ingénierie de confiance.</span></h1>
+      <p class="lead">SETS accompagne entreprises, administrations, industries, établissements de santé et infrastructures tertiaires dans la gestion, l'exploitation et l'optimisation de leurs bâtiments et équipements techniques — partout au Sénégal.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Demander un audit énergétique</a>
+        <a href="#domaines" class="btn btn-ghost">Voir nos domaines d'intervention</a>
       </div>
-      <div class="hero-panel marks">
-        <div class="hero-stat"><span class="label">Domaines d'intervention</span><span class="value">05</span></div>
-        <div class="hero-stat"><span class="label">Secteurs accompagnés</span><span class="value">06</span></div>
-        <div class="hero-stat"><span class="label">Approche</span><span class="value">Excellence opérationnelle</span></div>
-        <div class="hero-stat"><span class="label">Engagement</span><span class="value">Efficacité &amp; durabilité</span></div>
-      </div>
-    </div>
-
-    <div class="hero-illustration wrap">
-      <svg viewBox="0 0 1120 220" xmlns="http://www.w3.org/2000/svg">
-        <line x1="0" y1="200" x2="1120" y2="200" stroke="#3D8B5F" stroke-width="1" opacity="0.4"/>
-        <!-- building silhouette -->
-        <rect x="80" y="70" width="90" height="130" fill="#123049"/>
-        <rect x="180" y="40" width="70" height="160" fill="#16324A"/>
-        <rect x="260" y="90" width="60" height="110" fill="#123049"/>
-        <g stroke="#3D8B5F" stroke-width="1" opacity="0.5">
-          <line x1="95" y1="85" x2="95" y2="195"/><line x1="115" y1="85" x2="115" y2="195"/><line x1="135" y1="85" x2="135" y2="195"/><line x1="155" y1="85" x2="155" y2="195"/>
-          <line x1="195" y1="55" x2="195" y2="195"/><line x1="215" y1="55" x2="215" y2="195"/><line x1="235" y1="55" x2="235" y2="195"/>
-        </g>
-        <!-- solar panel row -->
-        <g transform="translate(400,150)">
-          <line x1="0" y1="50" x2="220" y2="50" stroke="#3D8B5F" stroke-width="1" opacity="0.4"/>
-          <g fill="#1F5F3F" opacity="0.9">
-            <polygon points="10,50 40,50 55,20 25,20"/>
-            <polygon points="60,50 90,50 105,20 75,20"/>
-            <polygon points="110,50 140,50 155,20 125,20"/>
-          </g>
-        </g>
-        <!-- HVAC / cooling unit -->
-        <g transform="translate(660,120)">
-          <rect x="0" y="0" width="90" height="80" fill="#16324A"/>
-          <g stroke="#BFD8C7" stroke-width="1" opacity="0.6">
-            <line x1="10" y1="15" x2="80" y2="15"/><line x1="10" y1="30" x2="80" y2="30"/>
-            <line x1="10" y1="45" x2="80" y2="45"/><line x1="10" y1="60" x2="80" y2="60"/>
-          </g>
-        </g>
-        <!-- crosshair registration marks -->
-        <g stroke="#DD8A3C" stroke-width="1">
-          <line x1="800" y1="30" x2="800" y2="46" /><line x1="792" y1="38" x2="808" y2="38"/>
-          <line x1="990" y1="60" x2="990" y2="76" /><line x1="982" y1="68" x2="998" y2="68"/>
-        </g>
-        <!-- distant towers -->
-        <g fill="#0D2438" opacity="0.9">
-          <rect x="900" y="60" width="40" height="140"/>
-          <rect x="950" y="100" width="34" height="100"/>
-          <rect x="994" y="30" width="46" height="170"/>
-        </g>
-      </svg>
     </div>
   </section>
 
-  <!-- STATS BAND -->
+  <!-- STATS -->
   <div class="stats-band">
     <div class="stats-grid wrap" style="padding:0;max-width:var(--max);">
       <div class="stat-item"><div class="num">05</div><div class="lbl">domaines couverts par nos équipes</div></div>
@@ -452,141 +258,113 @@
     </div>
   </div>
 
-  <!-- PHILOSOPHY / DIAGRAM -->
-  <section class="section philo">
-    <div class="wrap philo-grid">
+  <!-- MISSION -->
+  <section class="section tight" id="mission">
+    <div class="wrap section-head" style="margin-bottom:0;">
       <div>
-        <p class="kicker">Notre approche</p>
-        <h2>Visible en façade. <em>Vitale</em> en profondeur.</h2>
-        <p>Un bâtiment se juge à ce qu'on en voit : le confort d'une salle climatisée, un éclairage qui fonctionne, un ascenseur qui répond. Mais cette expérience repose entièrement sur ce qu'on ne voit pas — les réseaux électriques, les circuits de fluides, les groupes de secours, la supervision continue.</p>
-        <p>SETS s'occupe de cette couche invisible pour que la seule chose que vos occupants remarquent soit l'absence de problème.</p>
+        <p class="eyebrow-dark">Notre approche</p>
+        <h2>Excellence opérationnelle, efficacité énergétique, durabilité.</h2>
       </div>
-      <div class="diagram marks">
-        <div class="diagram-row"><span class="zone">En façade</span><span class="items">Confort thermique, éclairage, sécurité incendie</span></div>
-        <div class="diagram-row"><span class="zone">Dans les murs</span><span class="items">Câblage électrique, réseaux hydrauliques, capteurs</span></div>
-        <div class="diagram-row"><span class="zone">En sous-sol</span><span class="items">Groupes électrogènes, chambres froides, onduleurs</span></div>
-        <div class="diagram-row"><span class="zone">En continu</span><span class="items">Supervision, maintenance préventive, reporting</span></div>
-      </div>
+      <p>Nous garantissons la continuité des activités de nos clients tout en réduisant durablement leurs coûts d'exploitation — du diagnostic à la maintenance quotidienne.</p>
     </div>
   </section>
-
-  <hr class="rule">
-
-  <!-- INTRO / MISSION -->
-  <section class="intro" id="mission">
-    <div class="wrap intro-grid">
-      <p class="intro-lead">Notre approche repose sur l'excellence opérationnelle, l'efficacité énergétique et la durabilité environnementale.</p>
-      <div class="intro-body">
-        <p>Nous garantissons la continuité des activités de nos clients tout en réduisant durablement leurs coûts d'exploitation. Une équipe pluridisciplinaire pilote la gestion, l'exploitation et l'optimisation de vos bâtiments et équipements techniques, du diagnostic à la maintenance quotidienne.</p>
-        <p>Chaque intervention s'inscrit dans une logique de performance mesurable — moins de pannes, moins de consommation, plus de continuité — adaptée aux réalités africaines et aux exigences des secteurs les plus sensibles.</p>
-      </div>
-    </div>
-  </section>
-
-  <hr class="rule">
 
   <!-- DOMAINES -->
-  <section class="section" id="domaines">
+  <section class="section" id="domaines" style="padding-top:0;">
     <div class="wrap">
       <div class="section-head">
         <div>
-          <p class="kicker">Nos domaines d'intervention</p>
+          <p class="eyebrow-dark">Nos domaines d'intervention</p>
           <h2>Cinq disciplines, une seule équipe responsable.</h2>
         </div>
-        <p>De l'audit énergétique à la formation de vos équipes internes, chaque discipline est pilotée avec la même exigence technique.</p>
       </div>
     </div>
     <div class="domains wrap" style="padding:0;max-width:var(--max);">
       <div class="domain-card">
-        <svg class="domain-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="8" y="6" width="24" height="30"/><line x1="14" y1="12" x2="18" y2="12"/><line x1="22" y1="12" x2="26" y2="12"/><line x1="14" y1="18" x2="18" y2="18"/><line x1="22" y1="18" x2="26" y2="18"/><line x1="14" y1="24" x2="18" y2="24"/><line x1="22" y1="24" x2="26" y2="24"/><rect x="17" y="30" width="6" height="6"/></svg>
+        <svg class="domain-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="8" y="6" width="24" height="30"/><line x1="14" y1="12" x2="26" y2="12"/><line x1="14" y1="18" x2="26" y2="18"/><line x1="14" y1="24" x2="26" y2="24"/><rect x="17" y="30" width="6" height="6"/></svg>
         <h3>Facility management</h3>
-        <ul>
-          <li>Gestion technique des bâtiments</li>
-          <li>Maintenance préventive et corrective</li>
-          <li>Gestion des contrats de maintenance</li>
-          <li>Pilotage des prestataires techniques</li>
-          <li>Gestion des actifs et équipements</li>
-          <li>Suivi de la performance des installations</li>
-        </ul>
+        <p>Gestion technique, contrats de maintenance et pilotage des prestataires.</p>
       </div>
       <div class="domain-card">
-        <svg class="domain-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4v32M6 12l28 16M34 12L6 28M20 4l-4 6M20 4l4 6M20 36l-4-6M20 36l4-6"/></svg>
-        <h3>Génie climatique &amp; réfrigération</h3>
-        <ul>
-          <li>Climatisation résidentielle, tertiaire, industrielle</li>
-          <li>Chambres froides et installations frigorifiques</li>
-          <li>Fluides à faible impact climatique</li>
-          <li>Optimisation énergétique du refroidissement</li>
-          <li>Audit et modernisation des installations</li>
-        </ul>
+        <svg class="domain-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4v32M6 12l28 16M34 12L6 28"/></svg>
+        <h3>Génie climatique & réfrigération</h3>
+        <p>Climatisation, chambres froides et fluides à faible impact climatique.</p>
       </div>
       <div class="domain-card">
         <svg class="domain-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="22,4 10,22 18,22 16,36 30,16 22,16"/></svg>
-        <h3>Énergie &amp; efficacité énergétique</h3>
-        <ul>
-          <li>Audits énergétiques</li>
-          <li>Plans d'amélioration de la performance</li>
-          <li>Gestion et suivi des consommations</li>
-          <li>Éclairage performant et solutions intelligentes</li>
-          <li>Intégration des énergies renouvelables</li>
-        </ul>
+        <h3>Énergie & efficacité énergétique</h3>
+        <p>Audits, éclairage performant et intégration des énergies renouvelables.</p>
       </div>
       <div class="domain-card">
-        <svg class="domain-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="20" cy="20" r="6"/><path d="M20 4v6M20 30v6M36 20h-6M10 20H4M30.9 9.1l-4.2 4.2M13.3 26.7l-4.2 4.2M30.9 30.9l-4.2-4.2M13.3 13.3L9.1 9.1"/></svg>
+        <svg class="domain-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="20" cy="20" r="6"/><path d="M20 4v6M20 30v6M36 20h-6M10 20H4"/></svg>
         <h3>Maintenance multitechnique</h3>
-        <ul>
-          <li>Électricité basse tension</li>
-          <li>Plomberie et réseaux hydrauliques</li>
-          <li>Groupes électrogènes et onduleurs</li>
-          <li>Sécurité incendie</li>
-          <li>Contrôle et supervision technique</li>
-        </ul>
+        <p>Électricité, plomberie, groupes électrogènes et sécurité incendie.</p>
       </div>
       <div class="domain-card">
-        <svg class="domain-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 14l16-7 16 7-16 7-16-7z"/><path d="M11 18v8c0 2.5 4 5 9 5s9-2.5 9-5v-8"/><line x1="36" y1="14" x2="36" y2="26"/></svg>
-        <h3>Formation &amp; renforcement de capacités</h3>
-        <ul>
-          <li>Maintenance des bâtiments et équipements</li>
-          <li>Réfrigération et climatisation durables</li>
-          <li>Efficacité énergétique</li>
-          <li>Gestion des installations techniques</li>
-          <li>Santé, sécurité et environnement</li>
-        </ul>
+        <svg class="domain-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 14l16-7 16 7-16 7-16-7z"/><path d="M11 18v8c0 2.5 4 5 9 5s9-2.5 9-5v-8"/></svg>
+        <h3>Formation & renforcement</h3>
+        <p>Maintenance, efficacité énergétique, santé et sécurité au travail.</p>
       </div>
     </div>
   </section>
 
-  <!-- POURQUOI -->
-  <section class="section why" id="pourquoi">
+  <!-- ENERGY / SUSTAINABILITY -->
+  <section class="section energy" id="energie">
+    <div class="wrap energy-grid">
+      <div>
+        <p class="eyebrow-dark">Énergie durable</p>
+        <h2>Le froid maîtrisé. L'énergie solaire valorisée.</h2>
+        <p>Nos audits énergétiques et nos solutions de climatisation réduisent la consommation tout en intégrant les énergies renouvelables disponibles sur site.</p>
+        <p>Une approche qui conjugue performance thermique et sobriété — pour des infrastructures qui consomment moins et durent plus longtemps.</p>
+      </div>
+      <div class="energy-badges">
+        <div class="energy-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+          <span>Audits énergétiques & solaire intégré</span>
+        </div>
+        <div class="energy-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 4v32M6 12l28 16" transform="scale(0.6)"/><path d="M12 22c4-6 4-12 0-18M12 22c-4-6-4-12 0-18"/></svg>
+          <span>Génie climatique à faible impact</span>
+        </div>
+        <div class="energy-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c4 5 8 6 8 11a8 8 0 01-16 0c0-5 4-6 8-11z"/></svg>
+          <span>Efficacité énergétique mesurable</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="section" id="pourquoi">
     <div class="wrap">
       <div class="section-head">
         <div>
-          <p class="kicker">Pourquoi choisir SETS</p>
+          <p class="eyebrow-dark">Pourquoi choisir SETS</p>
           <h2>Une gestion proactive, pas seulement réactive.</h2>
         </div>
-        <p>Nous mesurons notre performance à la vôtre : moins d'arrêts, moins de coûts, plus de durabilité.</p>
+        <p>Moins d'arrêts, moins de coûts, plus de durabilité.</p>
       </div>
     </div>
     <div class="why-grid wrap" style="padding:0;max-width:var(--max);">
       <div class="why-card">
         <svg class="why-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="10" r="4"/><path d="M4 27c0-5 4-8 8-8s8 3 8 8"/><circle cx="23" cy="9" r="3"/><path d="M20 15c3-1 7 1 7 6"/></svg>
         <h3>Expertise technique</h3>
-        <p>Une équipe pluridisciplinaire spécialisée dans les services techniques et le facility management.</p>
+        <p>Équipe pluridisciplinaire en services techniques et facility management.</p>
       </div>
       <div class="why-card">
         <svg class="why-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 26h24M6 22V14l6-4 6 6 8-10v16"/></svg>
         <h3>Réduction des coûts</h3>
-        <p>Des solutions qui optimisent durablement les dépenses énergétiques et de maintenance.</p>
+        <p>Optimisation durable des dépenses énergétiques et de maintenance.</p>
       </div>
       <div class="why-card">
         <svg class="why-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M16 4l11 4v8c0 8-5 12-11 12S5 24 5 16V8z"/><path d="M11 16l4 4 7-8"/></svg>
         <h3>Continuité des activités</h3>
-        <p>Une gestion proactive pour limiter les arrêts et les pannes sur vos sites.</p>
+        <p>Gestion proactive pour limiter arrêts et pannes sur vos sites.</p>
       </div>
       <div class="why-card">
         <svg class="why-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M16 4c6 8 12 9 12 17a12 12 0 01-24 0c0-8 6-9 12-17z"/></svg>
         <h3>Engagement durable</h3>
-        <p>Des solutions conformes aux meilleures pratiques environnementales et énergétiques.</p>
+        <p>Solutions conformes aux meilleures pratiques environnementales.</p>
       </div>
     </div>
   </section>
@@ -596,7 +374,7 @@
     <div class="wrap">
       <div class="section-head">
         <div>
-          <p class="kicker">Nos secteurs d'activité</p>
+          <p class="eyebrow-dark">Nos secteurs d'activité</p>
           <h2>Adaptés aux exigences de chaque environnement.</h2>
         </div>
       </div>
@@ -605,9 +383,9 @@
       <div class="sector-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v18M6 8h12M6 8v13M18 8v13"/><path d="M9 21v-4h6v4"/></svg><span>Santé</span></div>
       <div class="sector-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 21V9l8-5 8 5v12"/><path d="M9 21v-6h6v6"/></svg><span>Hôtellerie</span></div>
       <div class="sector-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21V11l5 3V8l5 3V5l5 3v13z"/></svg><span>Industrie</span></div>
-      <div class="sector-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18"/><line x1="8" y1="8" x2="10" y2="8"/><line x1="14" y1="8" x2="16" y2="8"/><line x1="8" y1="13" x2="10" y2="13"/><line x1="14" y1="13" x2="16" y2="13"/></svg><span>Bureaux &amp; administration</span></div>
+      <div class="sector-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18"/><line x1="8" y1="8" x2="10" y2="8"/><line x1="14" y1="8" x2="16" y2="8"/><line x1="8" y1="13" x2="10" y2="13"/><line x1="14" y1="13" x2="16" y2="13"/></svg><span>Bureaux & administration</span></div>
       <div class="sector-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 10l8-6 8 6"/><path d="M6 10v11h12V10"/><line x1="12" y1="4" x2="12" y2="1"/></svg><span>Enseignement</span></div>
-      <div class="sector-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18l-2 12H5L3 6z"/><path d="M3 6L2 3H0"/><circle cx="9" cy="21" r="1"/><circle cx="16" cy="21" r="1"/></svg><span>Commerce &amp; surfaces de vente</span></div>
+      <div class="sector-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18l-2 12H5L3 6z"/><circle cx="9" cy="21" r="1"/><circle cx="16" cy="21" r="1"/></svg><span>Commerce & surfaces de vente</span></div>
     </div>
   </section>
 
@@ -615,7 +393,7 @@
   <div class="quote-band">
     <blockquote>
       Assurer la performance, la sécurité et la durabilité de vos infrastructures grâce à des solutions intégrées de facility management adaptées aux réalités africaines.
-      <cite>— SETS, Senegal Engineering &amp; Technical Services</cite>
+      <cite>SETS — Senegal Engineering & Technical Services</cite>
     </blockquote>
   </div>
 
@@ -623,7 +401,7 @@
   <section class="section contact" id="contact">
     <div class="wrap contact-grid">
       <div>
-        <p class="kicker">Contact</p>
+        <p class="eyebrow-dark">Contact</p>
         <h2>Parlons de la performance de vos infrastructures.</h2>
         <div class="contact-list">
           <div class="contact-row">
@@ -644,7 +422,7 @@
           </div>
         </div>
       </div>
-      <div class="contact-panel marks">
+      <div class="contact-panel">
         <h3>Demander un audit ou un devis</h3>
         <form onsubmit="event.preventDefault();this.querySelector('.btn-primary').textContent='Message envoyé';">
           <div class="field"><label for="nom">Nom</label><input id="nom" type="text" placeholder="Votre nom"></div>
@@ -660,8 +438,8 @@
 
 <footer>
   <div class="wrap footer-row">
-    <span>© 2026 Senegal Engineering &amp; Technical Services (SETS). Tous droits réservés.</span>
-    <span>Facility Management · Maintenance Multitechnique · Énergie · Réfrigération Durable</span>
+    <span>© 2026 Senegal Engineering & Technical Services (SETS). Tous droits réservés.</span>
+    <span>Dakar, Sénégal</span>
   </div>
 </footer>
 
