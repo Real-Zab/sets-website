@@ -255,10 +255,10 @@
   .section{padding:100px 0;}
   .section.tight{padding:76px 0;}
   .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:56px;flex-wrap:wrap;}
-  #partenaires .section-head{flex-direction:column;align-items:center;text-align:center;gap:16px;margin-bottom:48px;}
-  #partenaires .section-head .eyebrow-dark{justify-content:center;}
-  #partenaires .section-head h2{max-width:26ch;font-size:clamp(28px,4vw,42px);}
-  #partenaires .section-head p{max-width:56ch;margin:0 auto;}
+  #partenaires .section-head,.section-head.centered{flex-direction:column;align-items:center;text-align:center;gap:16px;margin-bottom:48px;}
+  #partenaires .section-head .eyebrow-dark,.section-head.centered .eyebrow-dark{justify-content:center;}
+  #partenaires .section-head h2,.section-head.centered h2{max-width:26ch;font-size:clamp(28px,4vw,42px);}
+  #partenaires .section-head p,.section-head.centered p{max-width:56ch;margin:0 auto;}
   .eyebrow-dark{font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--blue);
     display:flex;align-items:center;gap:10px;margin-bottom:16px;}
   .eyebrow-dark::before{content:"";width:24px;height:2px;background:var(--blue);}
@@ -321,7 +321,7 @@
   .contact{background:var(--paper-2);}
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;}
   @media(max-width:860px){.contact-grid{grid-template-columns:1fr;gap:36px;}}
-  .contact h2{font-size:clamp(26px,3vw,34px);max-width:14ch;}
+  .contact h2{font-size:clamp(26px,3vw,34px);max-width:30ch;}
   .contact-list{margin-top:28px;}
   .contact-row{display:flex;align-items:center;gap:14px;padding:16px 0;border-top:1px solid var(--line);}
   .contact-row svg{width:19px;height:19px;color:var(--blue);flex:none;}
@@ -335,7 +335,8 @@
     border-radius:10px;color:var(--blue-dark);font-weight:600;font-size:14px;}
   .social-link:hover{border-color:var(--blue);background:rgba(30,122,76,0.05);}
   .social-ico{width:32px;height:32px;border-radius:50%;background:var(--blue-dark);color:#fff;
-    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;flex:none;}
+    display:flex;align-items:center;justify-content:center;flex:none;padding:7px;box-sizing:border-box;}
+  .social-ico svg{width:100%;height:100%;}
   @media(max-width:480px){.social-grid{grid-template-columns:1fr;}}
   .contact-panel h3{font-size:16px;font-weight:700;margin-bottom:18px;color:var(--blue-dark);}
   .field{margin-bottom:16px;}
@@ -597,7 +598,7 @@
   <!-- DOMAINES -->
   <section class="section" id="domaines" style="padding-top:0;">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head centered">
         <div>
           <p class="eyebrow-dark">Nos domaines d'intervention</p>
           <h2>Cinq disciplines, une seule équipe responsable.</h2>
@@ -636,7 +637,7 @@
   <!-- PRODUITS -->
   <section class="section" id="produits">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head centered">
         <div>
           <p class="eyebrow-dark">Nos produits & équipements</p>
           <h2>Des équipements fiables, sélectionnés avec rigueur.</h2>
@@ -697,7 +698,7 @@
   <!-- SECTEURS -->
   <section class="section tight" id="secteurs">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head centered">
         <div>
           <p class="eyebrow-dark">Nos secteurs d'activité</p>
           <h2>Adaptés aux exigences de chaque environnement.</h2>
@@ -717,7 +718,7 @@
 
   <!-- NOTRE SOCIETE : MISSION -->
   <section class="section tight" id="mission">
-    <div class="wrap section-head" style="margin-bottom:0;">
+    <div class="wrap section-head centered" style="margin-bottom:0;">
       <div>
         <p class="eyebrow-dark">Notre approche</p>
         <h2>Excellence opérationnelle, efficacité énergétique, durabilité.</h2>
@@ -729,7 +730,7 @@
   <!-- NOTRE SOCIETE : POURQUOI -->
   <section class="section" id="pourquoi">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head centered">
         <div>
           <p class="eyebrow-dark">Pourquoi choisir SETS</p>
           <h2>Une gestion proactive, pas seulement réactive.</h2>
@@ -819,12 +820,12 @@
         <h3>Suivez SETS sur les réseaux</h3>
         <p class="social-sub">Actualités, chantiers et conseils techniques.</p>
         <div class="social-grid">
-          <a href="#" class="social-link" target="_blank" rel="noopener"><span class="social-ico">in</span>LinkedIn</a>
-          <a href="#" class="social-link" target="_blank" rel="noopener"><span class="social-ico">IG</span>Instagram</a>
-          <a href="#" class="social-link" target="_blank" rel="noopener"><span class="social-ico">f</span>Facebook</a>
-          <a href="#" class="social-link" target="_blank" rel="noopener"><span class="social-ico">X</span>X</a>
-          <a href="#" class="social-link" target="_blank" rel="noopener"><span class="social-ico">TT</span>TikTok</a>
-          <a href="#" class="social-link" target="_blank" rel="noopener"><span class="social-ico">P</span>Pinterest</a>
+          <a href="#" class="social-link" target="_blank" rel="noopener"><span class="social-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zM8.34 18.34H5.67V9.5h2.67v8.84zM7 8.35a1.55 1.55 0 110-3.1 1.55 1.55 0 010 3.1zm11.34 10H15.7v-4.5c0-1.08-.02-2.46-1.5-2.46-1.5 0-1.73 1.17-1.73 2.38v4.58H9.8V9.5h2.56v1.17h.04c.36-.67 1.23-1.38 2.54-1.38 2.71 0 3.4 1.79 3.4 4.11v5.04z"/></svg></span>LinkedIn</a>
+          <a href="#" class="social-link" target="_blank" rel="noopener"><span class="social-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></span>Instagram</a>
+          <a href="#" class="social-link" target="_blank" rel="noopener"><span class="social-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V8c0-.9.25-1.5 1.55-1.5H16.7V3.7C16.4 3.66 15.4 3.57 14.24 3.57c-2.4 0-4.04 1.47-4.04 4.17V9.9H7.5V13h2.7v8h3.3z"/></svg></span>Facebook</a>
+          <a href="#" class="social-link" target="_blank" rel="noopener"><span class="social-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 3H22l-7.6 8.7L23 21h-6.9l-5.4-6.7L4.5 21H1.4l8.2-9.3L1 3h7.1l4.9 6.2L18.9 3zm-1.2 16h1.7L7.4 5H5.6l12.1 14z"/></svg></span>X</a>
+          <a href="#" class="social-link" target="_blank" rel="noopener"><span class="social-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 2h-3.3v13.2a2.9 2.9 0 11-2.9-2.9c.28 0 .55.03.8.1V9a6 6 0 105.4 6V8.6a7.1 7.1 0 004 1.2V6.8a3.7 3.7 0 01-4-4.8z"/></svg></span>TikTok</a>
+          <a href="#" class="social-link" target="_blank" rel="noopener"><span class="social-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-3.65 19.3c-.05-.8-.09-2.02.02-2.9.1-.78.65-4.99.65-4.99s-.17-.33-.17-.83c0-.77.45-1.35 1-1.35.48 0 .71.36.71.79 0 .48-.3 1.2-.46 1.87-.13.56.28 1.02.83 1.02 1 0 1.77-1.05 1.77-2.57 0-1.34-.97-2.28-2.35-2.28-1.6 0-2.54 1.2-2.54 2.44 0 .48.19.99.42 1.27a.17.17 0 01.04.16c-.05.19-.15.6-.17.68-.03.11-.09.14-.2.08-.76-.35-1.24-1.46-1.24-2.34 0-1.9 1.38-3.65 3.98-3.65 2.09 0 3.71 1.49 3.71 3.48 0 2.08-1.31 3.75-3.13 3.75-.61 0-1.19-.32-1.38-.7l-.38 1.43c-.14.53-.51 1.2-.76 1.6A10 10 0 1012 2z"/></svg></span>Pinterest</a>
         </div>
       </div>
     </div>
