@@ -259,6 +259,9 @@
   #partenaires .section-head .eyebrow-dark,.section-head.centered .eyebrow-dark{justify-content:center;}
   #partenaires .section-head h2,.section-head.centered h2{max-width:26ch;font-size:clamp(28px,4vw,42px);}
   #partenaires .section-head p,.section-head.centered p{max-width:56ch;margin:0 auto;}
+  .head-card{background:var(--paper-2);border:1px solid var(--line);border-radius:20px;
+    padding:52px 44px;max-width:820px;margin-left:auto;margin-right:auto;}
+  @media(max-width:640px){.head-card{padding:36px 24px;}}
   .eyebrow-dark{font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--blue);
     display:flex;align-items:center;gap:10px;margin-bottom:16px;}
   .eyebrow-dark::before{content:"";width:24px;height:2px;background:var(--blue);}
@@ -414,6 +417,7 @@
                 <a href="#produit-groupes-electrogenes">Groupes électrogènes</a>
                 <a href="#produit-solaire">Panneaux solaires & onduleurs</a>
                 <a href="#produit-incendie">Systèmes de sécurité incendie</a>
+                <a href="#produit-eclairage">Éclairage & automatisation</a>
               </div>
               <div class="nav-dropdown-panel">
                 <p class="nav-dropdown-eyebrow">Nos produits & équipements</p>
@@ -596,7 +600,7 @@
   </div>
 
   <!-- DOMAINES -->
-  <section class="section" id="domaines" style="padding-top:0;">
+  <section class="section" id="domaines">
     <div class="wrap">
       <div class="section-head centered">
         <div>
@@ -666,6 +670,11 @@
         <h3>Systèmes de sécurité incendie</h3>
         <p>Détection, extinction et conformité des installations.</p>
       </div>
+      <div class="domain-card" id="produit-eclairage">
+        <svg class="domain-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4a10 10 0 00-6 18c1.2 1 2 2.4 2 4h8c0-1.6.8-3 2-4a10 10 0 00-6-18z"/><line x1="16" y1="30" x2="24" y2="30"/><line x1="17" y1="34" x2="23" y2="34"/></svg>
+        <h3>Éclairage & automatisation du bâtiment</h3>
+        <p>Éclairage basse consommation et gestion technique centralisée (GTB).</p>
+      </div>
     </div>
   </section>
 
@@ -718,19 +727,21 @@
 
   <!-- NOTRE SOCIETE : MISSION -->
   <section class="section tight" id="mission">
-    <div class="wrap section-head centered" style="margin-bottom:0;">
-      <div>
-        <p class="eyebrow-dark">Notre approche</p>
-        <h2>Excellence opérationnelle, efficacité énergétique, durabilité.</h2>
+    <div class="wrap">
+      <div class="head-card section-head centered" style="margin-bottom:0;">
+        <div>
+          <p class="eyebrow-dark">Notre approche</p>
+          <h2>Excellence opérationnelle, efficacité énergétique, durabilité.</h2>
+        </div>
+        <p>Nous garantissons la continuité des activités de nos clients tout en réduisant durablement leurs coûts d'exploitation — du diagnostic à la maintenance quotidienne.</p>
       </div>
-      <p>Nous garantissons la continuité des activités de nos clients tout en réduisant durablement leurs coûts d'exploitation — du diagnostic à la maintenance quotidienne.</p>
     </div>
   </section>
 
   <!-- NOTRE SOCIETE : POURQUOI -->
   <section class="section" id="pourquoi">
     <div class="wrap">
-      <div class="section-head centered">
+      <div class="head-card section-head centered">
         <div>
           <p class="eyebrow-dark">Pourquoi choisir SETS</p>
           <h2>Une gestion proactive, pas seulement réactive.</h2>
@@ -796,7 +807,7 @@
     <div class="wrap contact-grid">
       <div>
         <p class="eyebrow-dark">Contact</p>
-        <h2>Parlons de la performance de vos infrastructures.</h2>
+        <h2>Parlons de la performance<br>de vos infrastructures.</h2>
         <div class="contact-list">
           <div class="contact-row">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8 9.7a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"/></svg>
