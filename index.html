@@ -97,25 +97,26 @@
   .nav-item:hover .nav-link::after,.nav-item:focus-within .nav-link::after{transform:translateX(-50%) scale(1);}
   .nav-item:hover .nav-chevron,.nav-item:focus-within .nav-chevron{transform:rotate(180deg);}
   .nav-dropdown{
-    position:fixed;left:0;right:0;top:78px;z-index:49;
-    display:flex;justify-content:center;
-    opacity:0;visibility:hidden;transform:translateY(-8px);pointer-events:none;
-    transition:opacity .2s ease,transform .2s ease,visibility .2s;
+    position:absolute;top:100%;left:50%;transform:translateX(-50%);
+    padding-top:16px;z-index:49;
+    opacity:0;visibility:hidden;pointer-events:none;
+    transition:opacity .2s ease,visibility .2s;
   }
   .nav-item:hover .nav-dropdown,.nav-item:focus-within .nav-dropdown{
-    opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto;
+    opacity:1;visibility:visible;pointer-events:auto;
   }
   .nav-dropdown-inner{
-    width:min(720px,calc(100% - 40px));display:flex;overflow:hidden;
+    width:min(680px,calc(100vw - 32px));display:flex;overflow:hidden;
+    max-height:min(70vh,520px);
     background:rgba(20,26,22,0.97);backdrop-filter:blur(14px);
     border:1px solid rgba(255,255,255,0.12);border-radius:18px;
     box-shadow:0 24px 48px rgba(0,0,0,0.35);
   }
   .nav-dropdown-list{flex:1 1 42%;padding:20px;display:flex;flex-direction:column;gap:2px;
-    border-right:1px solid rgba(255,255,255,0.1);}
+    border-right:1px solid rgba(255,255,255,0.1);overflow-y:auto;}
   .nav-dropdown-list a{color:#fff;font-size:13.5px;font-weight:600;padding:9px 10px;border-radius:8px;}
   .nav-dropdown-list a:hover{background:rgba(255,255,255,0.08);color:var(--gold);}
-  .nav-dropdown-panel{flex:1 1 58%;padding:26px 28px;color:#fff;}
+  .nav-dropdown-panel{flex:1 1 58%;padding:26px 28px;color:#fff;overflow-y:auto;}
   .nav-dropdown-eyebrow{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
   .nav-dropdown-panel h4{font-family:'Archivo',sans-serif;font-size:18px;margin-bottom:8px;}
   .nav-dropdown-panel p{font-size:13.5px;color:#DCE7E0;line-height:1.55;}
