@@ -252,6 +252,10 @@
   .section{padding:100px 0;}
   .section.tight{padding:76px 0;}
   .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:56px;flex-wrap:wrap;}
+  #partenaires .section-head{flex-direction:column;align-items:center;text-align:center;gap:16px;margin-bottom:48px;}
+  #partenaires .section-head .eyebrow-dark{justify-content:center;}
+  #partenaires .section-head h2{max-width:26ch;font-size:clamp(28px,4vw,42px);}
+  #partenaires .section-head p{max-width:56ch;margin:0 auto;}
   .eyebrow-dark{font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--blue);
     display:flex;align-items:center;gap:10px;margin-bottom:16px;}
   .eyebrow-dark::before{content:"";width:24px;height:2px;background:var(--blue);}
@@ -434,6 +438,7 @@
                 <a href="#secteurs">Bureaux & administration</a>
                 <a href="#secteurs">Enseignement</a>
                 <a href="#secteurs">Commerce & surfaces de vente</a>
+                <a href="#secteurs">Domestique</a>
               </div>
               <div class="nav-dropdown-panel">
                 <p class="nav-dropdown-eyebrow">Nos secteurs d'activité</p>
@@ -558,7 +563,7 @@
       <p class="eyebrow">Facility management & services techniques intégrés</p>
       <div class="hero-row">
         <h1>Infrastructures performantes. <span>Ingénierie de confiance.</span></h1>
-        <p class="lead">SETS accompagne entreprises, administrations, industries, établissements de santé et infrastructures tertiaires dans la gestion, l'exploitation et l'optimisation de leurs bâtiments et équipements techniques — partout au Sénégal.</p>
+        <p class="lead">SETS accompagne entreprises, administrations, industries, établissements de santé, infrastructures tertiaires et domestiques dans la gestion, l'exploitation et l'optimisation de leurs bâtiments et équipements techniques — partout au Sénégal.</p>
       </div>
     </div>
     <div class="scroll-cue">
@@ -705,6 +710,7 @@
       <div class="sector-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18"/><line x1="8" y1="8" x2="10" y2="8"/><line x1="14" y1="8" x2="16" y2="8"/><line x1="8" y1="13" x2="10" y2="13"/><line x1="14" y1="13" x2="16" y2="13"/></svg><span>Bureaux & administration</span></div>
       <div class="sector-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 10l8-6 8 6"/><path d="M6 10v11h12V10"/><line x1="12" y1="4" x2="12" y2="1"/></svg><span>Enseignement</span></div>
       <div class="sector-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18l-2 12H5L3 6z"/><circle cx="9" cy="21" r="1"/><circle cx="16" cy="21" r="1"/></svg><span>Commerce & surfaces de vente</span></div>
+      <div class="sector-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg><span>Domestique</span></div>
     </div>
   </section>
 
@@ -844,6 +850,29 @@
     }
     window.addEventListener('hashchange', flashTarget);
     window.addEventListener('load', flashTarget);
+  })();
+</script>
+<script>
+  (function(){
+    var items = document.querySelectorAll('.nav-item');
+    items.forEach(function(item){
+      var dropdown = item.querySelector('.nav-dropdown');
+      if(!dropdown) return;
+      function reposition(){
+        dropdown.style.transform = 'translateX(-50%)';
+        var rect = dropdown.getBoundingClientRect();
+        var margin = 12;
+        var overflowLeft = margin - rect.left;
+        var overflowRight = rect.right - (window.innerWidth - margin);
+        if(overflowLeft > 0){
+          dropdown.style.transform = 'translateX(calc(-50% + ' + overflowLeft + 'px))';
+        } else if(overflowRight > 0){
+          dropdown.style.transform = 'translateX(calc(-50% - ' + overflowRight + 'px))';
+        }
+      }
+      item.addEventListener('mouseenter', reposition);
+      item.addEventListener('focusin', reposition);
+    });
   })();
 </script>
 </body>
