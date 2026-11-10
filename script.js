@@ -17,6 +17,7 @@
   (function(){
     var placeEls = document.querySelectorAll('.js-local-place');
     var sunEls = document.querySelectorAll('.js-local-sun');
+    try{var cp=sessionStorage.getItem('setsPlace'),cs=sessionStorage.getItem('setsSun');if(cp)placeEls.forEach(function(e){e.textContent=cp;});if(cs)sunEls.forEach(function(e){e.textContent=cs;});}catch(e){}
     if(!placeEls.length || !navigator.geolocation){
       var bar1 = document.getElementById('localBar');
       var bar2 = document.getElementById('navLocalMobile');
@@ -32,7 +33,7 @@
         .then(function(data){
           var parts = [data.locality, data.city && data.city !== data.locality ? data.city : null].filter(Boolean);
           var text = parts.length ? parts.join(', ') : (data.principalSubdivision || 'Localisation indisponible');
-          placeEls.forEach(function(el){ el.textContent = text; });
+          placeEls.forEach(function(el){ el.textContent = text; }); try{sessionStorage.setItem('setsPlace',text);}catch(e){}
         })
         .catch(function(){ placeEls.forEach(function(el){ el.textContent = 'Localisation indisponible'; }); });
 
@@ -46,7 +47,7 @@
             var sunset = new Date(data.results.sunset).toLocaleTimeString('fr-FR', fmt);
             text = 'Lever ' + sunrise + ' · Coucher ' + sunset;
           }
-          sunEls.forEach(function(el){ el.textContent = text; });
+          sunEls.forEach(function(el){ el.textContent = text; }); try{sessionStorage.setItem('setsSun',text);}catch(e){}
         })
         .catch(function(){ sunEls.forEach(function(el){ el.textContent = '—'; }); });
     }, function(){
