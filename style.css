@@ -198,7 +198,7 @@
   /* ---------- HERO (plein écran, façon Terminal) ---------- */
   .hero{
     position:relative;color:#fff;overflow:hidden;
-    height:100vh;min-height:600px;display:flex;align-items:flex-start;
+    height:100vh;height:100svh;min-height:480px;display:flex;align-items:flex-start;
     background:
       linear-gradient(180deg, rgba(11,59,38,0.1) 0%, rgba(11,59,38,0.8) 78%, rgba(11,59,38,0.96) 100%),
       radial-gradient(ellipse at 50% 28%, #E3A73C 0%, #C9873A 26%, #4C6B55 52%, #123B27 78%, #0B3B26 100%);
@@ -376,11 +376,11 @@
 
   /* ---------- MULTI-PAGE ---------- */
   .nav-link.active{color:var(--gold);border-bottom-color:var(--gold);}
-  .page-hero{background:var(--blue-dark);color:#fff;padding:150px 0 64px;}
+  .page-hero{background:var(--blue-dark);color:#fff;padding:120px 0 40px;}
   .page-hero .eyebrow{font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin:0 0 14px;}
-  .page-hero h1{font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(30px,5vw,52px);line-height:1.08;margin:0 0 16px;max-width:22ch;color:#fff;}
+  .page-hero h1{font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(28px,4vw,42px);line-height:1.1;margin:0 0 12px;max-width:26ch;color:#fff;}
   .page-hero .lead{max-width:60ch;color:rgba(255,255,255,0.78);font-size:17px;margin:0;}
-  @media(max-width:640px){.page-hero{padding:112px 0 44px;}}
+  @media(max-width:640px){.page-hero{padding:96px 0 32px;}}
   .card-link{display:inline-block;margin-top:14px;font-size:14px;font-weight:700;color:var(--blue);}
   .card-link:hover{color:var(--gold);}
   .section-cta{text-align:center;margin-top:40px;}
@@ -395,3 +395,11 @@
   .cta-solid:hover{background:var(--blue);color:#fff;}
   .cta-outline{border:1px solid var(--blue);color:var(--blue);}
   .cta-outline:hover{background:var(--blue);color:#fff;}
+  a.domain-card{display:block;color:inherit;}
+  a.domain-card:hover .card-link{color:var(--gold);}
+  .detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
+  @media(max-width:860px){.detail-grid{grid-template-columns:1fr;gap:32px;}}
+  .detail-grid h2{font-size:clamp(24px,3vw,34px);margin:0 0 20px;max-width:20ch;}
+  .detail-more{margin:24px 0 0;}
+  .presta-list{list-style:none;margin:0;padding:0;display:grid;gap:12px;}
+  .presta-list li{background:#EEF7F1;border-left:3px solid var(--blue);padding:18px 20px;font-weight:600;color:var(--blue-dark);}
